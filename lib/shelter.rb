@@ -25,4 +25,8 @@ class Shelter
     false
   end
 
+  def adopt
+    pets.shift until @pets.length <= @capacity
+  end
+
 end

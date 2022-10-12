@@ -77,4 +77,40 @@ RSpec.describe Shelter do
         expect(shelter.over_capacity?).to be true
       end
     end
+
+    # Iteration 4
+    describe '#adopt' do
+      it 'removes pet from shelter' do
+
+        shelter = Shelter.new('Denver Animal Shelter', 3)
+        shelter.add_pet('Salem')
+        shelter.add_pet('Beethoven')
+        shelter.add_pet('Spot')
+        shelter.add_pet('Jonesy')
+
+        expect(shelter.over_capacity?).to be true
+
+# require 'pry'; binding.pry
+
+        shelter.adopt
+
+        expect(shelter.over_capacity?).to be false
+      end
+
+      it 'continues to remove UNTIL no longer over capacity' do
+        
+        shelter = Shelter.new('Denver Animal Shelter', 1)
+        shelter.add_pet('Salem')
+        shelter.add_pet('Beethoven')
+        shelter.add_pet('Spot')
+        shelter.add_pet('Jonesy')
+
+        expect(shelter.over_capacity?).to be true
+
+        shelter.adopt
+
+        expect(shelter.over_capacity?).to be false
+      end
+    end
+
 end
