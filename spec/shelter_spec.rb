@@ -48,7 +48,6 @@ RSpec.describe Shelter do
 
   describe '#call_pets' do
       it 'returns a list of names with exclamation points appended' do
-        skip
 
         shelter = Shelter.new('Denver Animal Shelter', 5)
         shelter.add_pet('Salem')
@@ -56,7 +55,11 @@ RSpec.describe Shelter do
         shelter.add_pet('Spot')
         shelter.add_pet('Jonesy')
 
+# require 'pry'; binding.pry
+
         expect(shelter.call_pets).to eq(['Salem!', 'Beethoven!', 'Spot!', 'Jonesy!'])
       end
     end
+
+    # Iteration 3
 end
