@@ -8,4 +8,8 @@ class Shelter
     @pets = []
   end
 
+  def add_pet(pet)
+    @pets << pet
+  end
+
 end
