@@ -98,7 +98,7 @@ RSpec.describe Shelter do
       end
 
       it 'continues to remove UNTIL no longer over capacity' do
-        
+
         shelter = Shelter.new('Denver Animal Shelter', 1)
         shelter.add_pet('Salem')
         shelter.add_pet('Beethoven')

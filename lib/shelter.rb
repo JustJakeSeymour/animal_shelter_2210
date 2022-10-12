@@ -13,6 +13,10 @@ class Shelter
     @pets << pet
   end
 
+  def patrons
+    return @pets
+  end
+
   def call_pets
     pets.each do |pet|
       @pet_call << pet + '!'
